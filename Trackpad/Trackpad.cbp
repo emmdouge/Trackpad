@@ -31,8 +31,26 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-DSFML_STATIC" />
+			<Add directory="../eigen-3.3.7" />
+			<Add directory="../SFML-2.5.1/include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Linker>
+			<Add library="include/libTrackpadLIB.a" />
+			<Add library="sfml-graphics-s" />
+			<Add library="sfml-window-s" />
+			<Add library="sfml-system-s" />
+			<Add library="opengl32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add directory="../SFML-2.5.1/lib" />
+		</Linker>
+		<Unit filename="../Main.cpp" />
+		<Unit filename="../Tracker.cpp" />
+		<Unit filename="../Tracker.h" />
+		<Unit filename="../TrackpadDLL.h" />
+		<Unit filename="../WinLowLevel.cpp" />
+		<Unit filename="../WinLowLevel.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

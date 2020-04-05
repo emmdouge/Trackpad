@@ -33,7 +33,7 @@ void WinLowLevel::Move(int dx, int dy) {
   INPUT input = { 0 };
   ::ZeroMemory(&input, sizeof(INPUT));
   input.type = INPUT_MOUSE;
-  input.mi.dwFlags = MOUSEEVENTF_MOVE;
+  input.mi.dwFlags = MOUSEEVENTF_MOVE | MOUSEEVENTF_ABSOLUTE;
   input.mi.dx = (LONG)dx;
   input.mi.dy = (LONG)dy;
   ::SendInput(1, &input, sizeof(INPUT));

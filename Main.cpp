@@ -203,17 +203,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         WinLowLevel::Click(click == Tracker::Click::PRESSED);
       }
       if (tracker.GetNumTracked() == 1) {
-        const Tracker::Vector2 pt = tracker.GetFilteredPt(0)*1.75f;
+        const Tracker::Vector2 pt = tracker.GetFilteredPt(0)*5.0f;
         if (!is_tracking) {
           is_tracking = true;
           mouse_pos = pt;
         } else {
-          const Tracker::Vector2 delta = pt - mouse_pos;
+          const Tracker::Vector2 delta = pt;
           int dx = int(delta.x());
           int dy = int(delta.y());
           WinLowLevel::Move(dx, dy);
-          mouse_pos.x() += float(dx);
-          mouse_pos.y() += float(dy);
+          mouse_pos.x() = float(dx);
+          mouse_pos.y() = float(dy);
         }
       } else if (tracker.GetNumTracked() == 2) {
         const Tracker::Vector2 vel1 = tracker.GetTrackedVel(0);

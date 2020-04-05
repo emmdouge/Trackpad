@@ -36,7 +36,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="../TrackpadDLL.cpp" />
+		<Unit filename="../TrackpadDLL.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

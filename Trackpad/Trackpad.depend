@@ -5,7 +5,7 @@
 1586058487 c:\users\herby\desktop\repos\trackpad\trackpaddll.h
 	<Windows.h>
 
-1586058487 source:c:\users\herby\desktop\repos\trackpad\main.cpp
+1586062635 source:c:\users\herby\desktop\repos\trackpad\main.cpp
 	"Tracker.h"
 	"WinLowLevel.h"
 	<SFML/Graphics.hpp>
@@ -1164,7 +1164,7 @@
 	"Tracker.h"
 	<iostream>
 
-1586060833 source:c:\users\herby\desktop\repos\trackpad\winlowlevel.cpp
+1586062465 source:c:\users\herby\desktop\repos\trackpad\winlowlevel.cpp
 	"WinLowLevel.h"
 	"TrackpadDLL.h"
 	<Windows.h>
