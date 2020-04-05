@@ -1,0 +1,6 @@
+EXPORTS
+    _Z11InstallHookP6HWND__ @1
+    _Z13UninstallHookv @2
+    hookHandle @3 DATA
+    hwndServer @4 DATA
+    instanceHandle @5 DATA

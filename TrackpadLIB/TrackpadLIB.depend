@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1586058487 source:c:\users\herby\desktop\repos\trackpad\trackpaddll.cpp
+	"TrackpadDLL.h"
+
+1586058487 c:\users\herby\desktop\repos\trackpad\trackpaddll.h
+	<Windows.h>
+

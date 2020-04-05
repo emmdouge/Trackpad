@@ -1,7 +1,10 @@
 #include "WinLowLevel.h"
-#include "../TrackpadDLL/TrackpadDLL.h"
+#include "TrackpadDLL.h"
+
 #include <Windows.h>
 #include <iostream>
+#include <winable.h>
+#include <winuser.h>
 
 #pragma comment(lib, "TrackpadDLL.lib")
 
@@ -51,14 +54,6 @@ void WinLowLevel::Scroll(int dx, int dy) {
     input.type = INPUT_MOUSE;
     input.mi.dwFlags = MOUSEEVENTF_WHEEL;
     input.mi.mouseData = (LONG)dy;
-    ::SendInput(1, &input, sizeof(INPUT));
-  }
-  if (dx != 0) {
-    INPUT input = { 0 };
-    ::ZeroMemory(&input, sizeof(INPUT));
-    input.type = INPUT_MOUSE;
-    input.mi.dwFlags = MOUSEEVENTF_HWHEEL;
-    input.mi.mouseData = (LONG)dx;
     ::SendInput(1, &input, sizeof(INPUT));
   }
 }
