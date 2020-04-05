@@ -203,12 +203,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         WinLowLevel::Click(click == Tracker::Click::PRESSED);
       }
       if (tracker.GetNumTracked() == 1) {
-        const Tracker::Vector2 pt = tracker.GetFilteredPt(0)*5.0f;
+        const Tracker::Vector2 pt = tracker.GetFilteredPt(0);
         if (!is_tracking) {
           is_tracking = true;
           mouse_pos = pt;
         } else {
-          const Tracker::Vector2 delta = pt;
+          Tracker::Vector2 delta = pt;
+          int offsetX = 17000;
+          int offsetY = 15000;
+          float width = offsetX*3.0f;
+          float height = width;
+          delta.x() *=(width/1200);
+          delta.x() += offsetX;
+          delta.y() *= (265);
+          delta.y() -= offsetY;
           int dx = int(delta.x());
           int dy = int(delta.y());
           WinLowLevel::Move(dx, dy);
